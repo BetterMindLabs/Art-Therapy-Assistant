@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyAc6ctooYBucHy1dvONh6IPPRqBX4U4H68")
+genai.configure(api_key=st.secrets["api_key"])
 model = genai.GenerativeModel("gemini-2.5-flash")
 
 st.title("🎨✨ Interactive Art Therapy")
